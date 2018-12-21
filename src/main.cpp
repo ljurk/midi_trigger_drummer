@@ -1,3 +1,4 @@
+#include <Arduino.h>
 #include "storage.h"
 #include "midi.h"
 #include "drum_triggers.h"

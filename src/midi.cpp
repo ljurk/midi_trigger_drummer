@@ -8,12 +8,12 @@ namespace MIDI {
   int8_t key = -1;
 
   void setup() {
-    Serial1.begin(31250);
+    Serial.begin(31250);
   }
 
   void process_messages() {
-    while (Serial1.available() > 0) {
-      uint8_t midi_data = Serial1.read();
+    while (Serial.available() > 0) {
+      uint8_t midi_data = Serial.read();
 
       if (midi_data >= MIDI_NOTE_OFF) {
         uint8_t received_channel = midi_data % 0x10;
